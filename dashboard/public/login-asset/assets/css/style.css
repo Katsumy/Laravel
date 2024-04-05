@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Variaveis */
+:root{
+    --poppins-font: 'Poppins', sans-serif;
+    --white-color: #fff;
+    --grey-color: #999;
+    --btn-social-color: #31374a;
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--poppins-font);
+    background-color: var(--white-color);
+}
+
+h3{
+    font-family: var(--poppins-font);
+    font-size: 1.175rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bg-holder{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#bg-login{
+    background-image: url('../img/bg-login-otimizado.jpg');
+}
+
+.logo-login{
+    width: 60%;
+}
+
+#text-login{
+    font-family: var(--poppins-font);
+}
+
+.btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.btn i {
+    vertical-align: text-top;
+}
+
+.btn-outline-custom {
+    color: var(--btn-social-color);
+    border-color: #ddd;
+}
+
+.btn-outline-custom:hover {
+    color: var(--btn-social-color);
+    border-color: #eee;
+    background-color: #eee;
+}
+
+.divider {
+    margin: 2rem 0;
+}
+
+.divider-content-center {
+   position: absolute;
+   top: 50%; 
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+   background-color: var(--white-color);
+   font-size: 0.8rem;
+   font-weight: 500;
+   color: var(--grey-color); 
+}
