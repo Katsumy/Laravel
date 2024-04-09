@@ -56,10 +56,10 @@
                     </a>
                     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Log In</a>
+                            <a href="{{route('admin.funcoes.index')}}" class="sidebar-link">Funções</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Register</a>
+                            <a href="{{route('admin.permissoes.index')}}" class="sidebar-link">Permissões</a>
                         </li>
                         <li class="sidebar-item">
                             <a href="#" class="sidebar-link">Forgot Password</a>

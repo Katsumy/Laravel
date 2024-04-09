@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\FuncaoController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\PermissaoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,9 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->group(function(){
+Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin.')->group(function(){
     Route::middleware(['auth', 'verified'])->group(function(){
         Route::get('home', [HomeController::class, 'index'])->name('dashboard');
+
+        // Acesso restrito
+        Route::middleware(['auth', 'role:admin'])->group(function(){
+            Route::resource('/funcoes', FuncaoController::class);
+            Route::resource('/permissoes', PermissaoController::class);
+        });
     });
 });
 
