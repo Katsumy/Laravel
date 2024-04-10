@@ -48,7 +48,7 @@
                     </li>
                 </ul>
             </li>
-            @role('admin')
+            @role('Administrador')
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse" aria-expanded="false">
                         <i class="fa-solid fa-user pe-2"></i>

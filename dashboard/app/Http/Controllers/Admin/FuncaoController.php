@@ -37,7 +37,12 @@ class FuncaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $funcaoId = $request->id;
+
+        $funcao = Role::updateOrCreate(
+            ['id' => $funcaoId],
+            ['name' => $request->name]
+        );
     }
 
     /**
@@ -51,9 +56,12 @@ class FuncaoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request)
     {
-        //
+        $where = array('id' => $request->id);
+        $funcao = Role::where($where)->first();
+
+        return response()->json($funcao);
     }
 
     /**

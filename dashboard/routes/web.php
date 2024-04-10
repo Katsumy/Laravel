@@ -26,7 +26,7 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin.')-
         Route::get('home', [HomeController::class, 'index'])->name('dashboard');
 
         // Acesso restrito
-        Route::middleware(['auth', 'role:admin'])->group(function(){
+        Route::middleware(['auth', 'role:Administrador'])->group(function(){
             Route::resource('/funcoes', FuncaoController::class);
             Route::resource('/permissoes', PermissaoController::class);
         });

@@ -16,7 +16,7 @@ class PermissaoController extends Controller
     {
         if(request()->ajax()) {
             return datatables()->of(Permission::select('*'))
-                ->addColumn('action', 'admin.permissoes._permissoes-action')
+                ->addColumn('action', 'admin.regras.permissoes._permissoes-action')
                 ->rawColumns(['action'])
                 ->addIndexColumn()
                 ->make(true);
@@ -38,7 +38,12 @@ class PermissaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $permissaoId = $request->id;
+
+        $permissao = Permission::updateOrCreate(
+            ['id' => $permissaoId],
+            ['name' => $request->name]
+        );
     }
 
     /**
@@ -52,9 +57,12 @@ class PermissaoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request)
     {
-        //
+        $where = array('id' => $request->id);
+        $permissao = Permission::where($where)->first();
+
+        return response()->json($permissao);
     }
 
     /**

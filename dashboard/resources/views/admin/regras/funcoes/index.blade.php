@@ -16,6 +16,8 @@
         </tr>
         </thead>
     </table>
+
+    @include('admin.regras.funcoes._popup')
 @endsection
 
 @section('js')

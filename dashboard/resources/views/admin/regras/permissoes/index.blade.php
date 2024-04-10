@@ -16,6 +16,8 @@
         </tr>
         </thead>
     </table>
+
+    @include('admin.regras.permissoes._popup')
 @endsection
 
 @section('js')

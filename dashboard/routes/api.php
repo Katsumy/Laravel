@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\FuncaoController;
+use App\Http\Controllers\Admin\PermissaoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('funcoes/store', [FuncaoController::class, 'store']);
+Route::post('funcoes/edit', [FuncaoController::class, 'edit']);
+
+Route::post('permissoes/store', [PermissaoController::class, 'store']);
+Route::post('permissoes/edit', [PermissaoController::class, 'edit']);

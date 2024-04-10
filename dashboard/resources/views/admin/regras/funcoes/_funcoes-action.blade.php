@@ -1,2 +1,2 @@
-<a href="javascript:void(0)" data-toogle="tooltip" onclick="editFunc({{$id}})" data-original-title="Edit" class="btn btn-secondary btn-sm"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+<a href="javascript:void(0)" data-toogle="tooltip" onclick="editarFuncao({{$id}})" data-original-title="Edit" class="btn btn-secondary btn-sm"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
 <a href="javascript:void(0)" data-toogle="tooltip" onclick="deleteFunc({{$id}})" data-original-title="Delete" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash-can"></i> Delete</a>
